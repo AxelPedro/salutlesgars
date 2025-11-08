@@ -1,0 +1,45 @@
+Base code :
+
+Classe Tas. gère les piles de tuiles. 
+C’est là qu’on stocke les tuiles et qu’on peut ensuite les récupérer une par une.
+
+Classe Pioche. gère les 11 tas du jeu.
+Elle permet de savoir si la pioche est vide, de piocher dans un tas, et de suivre combien de tuiles ont déjà été prises dans chaque tas.
+
+Classe Table. gère les tuiles visibles au centre de la table.
+Elle contient aussi les tuiles restantes après avoir formé les 11 tas 
+
+
+Fonctio en + pour tester :
+
+1. j’ai créé 61 tuiles de base avec un identifiant (ex. T2_01, T3_07, T4_11) et un nombre minimum de joueurs.
+	Ensuite, les tuiles sont filtrées selon le nombre de joueurs (2+;2+/3+;2+/3+/4+) car on a 37 tuiles 2+ et apres 12 et 12.
+
+2.	Répartition aléatoire des tuiles dans 11 tas :
+	Les tuiles qui composent les tas sont mélangées aléatoirement et réparties dans 11 tas de taille (nb_joueurs + 1).
+
+3.	Réserve (chantier) :
+	Les tuiles restantes après la création des tas sont utilisées pour démarrer le chantier.
+
+4.	Simulation d’une partie :
+
+	J’ai ajouté une petite boucle qui simule les tours.
+	on affiche les tuiles du chantier, on en retire une et le chantier se recharge automatiquement dès qu’il n’en reste qu’une.
+
+//////////////////////////////////////////////////////////////////////////
+
+Logique de fonctionnement :
+
+On choisit le nombre de joueurs (entre 2 et 4).
+
+Le programme crée 61 tuiles prédéfinies.
+
+Les tuiles sont mélangées aléatoirement.
+
+On crée 11 tas, chacun contenant (nb_joueurs + 1) tuiles.
+
+Les tuiles restantes deviennent la réserve utilisée pour le chantier.
+
+Le chantier affiche ses tuiles disponibles et se recharge tout seul quand il ne reste plus qu’une seule tuile.
+
+La simulation montre le fonctionnement
